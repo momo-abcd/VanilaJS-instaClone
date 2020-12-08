@@ -1,0 +1,23 @@
+.container {
+    width:348px;height:358px;
+    background-color:#fff;
+    border:1px solid #DBDBDB;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+.container form {
+    box-sizing: border-box;
+}
+.inputId input{
+    background-color:#FAFAFA;
+    width:258px;height:36px;
+    border:1px solid #DBDBDB;
+    box-sizing: border-box;
+}
+.inputPassword input {
+    background-color:#FAFAFA;
+    width:258px;height:36px;
+    border:1px solid #DBDBDB;
+    box-sizing: border-box;
+}
