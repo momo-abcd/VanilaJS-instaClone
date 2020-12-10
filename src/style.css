@@ -10,23 +10,56 @@ body {
     align-items: center;
     flex-direction: column;
 }
+.logo{
+    margin-top:15px;
+    margin-bottom: 15px;;
+}
 .container form {
     box-sizing: border-box;
 }
+
+
+/* email, pw input  */
+
+.inputId, .inputPassword {
+    position: relative;
+}
+.inputPassword label, .inputId label{
+    position: absolute;
+    font-size:12px;
+    color:#8e8e8e;
+    left:8px;top:10px;
+    pointer-events: none; /* label 드래그안되게하는옵션! */
+}
+
+.inputPassword input:focus, .inputId input:focus{
+    outline:none;
+    border-color:#acabab;
+}
+.inputPassword input:focus +  label , .inputId input:valid +  label{
+    top:0px;left:0px;
+}
+
 .inputId input{
     background-color:#FAFAFA;
     width:258px;height:36px;
     border:1px solid #DBDBDB;
+    border-radius: 3px;
     box-sizing: border-box;
     margin-bottom:6px;
+    padding-left:8px;
 }
 .inputPassword input {
     background-color:#FAFAFA;
     width:258px;height:36px;
     border:1px solid #DBDBDB;
     box-sizing: border-box;
+    border-radius: 3px;
     margin-bottom:6px;
+    padding-left:8px;
 }
+
+/* login button */
 .container button {
     box-sizing: border-box;
     width:258px;height:30px;
