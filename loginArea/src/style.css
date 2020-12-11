@@ -133,17 +133,18 @@ body {
 
 .downApp {
     display:flex;
-    background-color:red;
+    flex-direction: column;
     width:350px;
-    /* justify-items: center; */
-    /* align-items: center; */
+     justify-items: center;
 }
-.downImg p {
-    background-color:orange;
+.downApp p {
+    text-align: center;
 }
-.downImg img:nth-child(1) {
-    flex-grow:3;
+.downImg {
+    display:flex;
+    justify-content: center;
 }
-.downImg img:nth-child(2) {
-    flex-grow:1;
+.downImg img {
+    height:40px;
+    margin-right:8px;
 }
