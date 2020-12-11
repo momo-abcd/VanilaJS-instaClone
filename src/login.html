@@ -1,29 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-    <div class="logo"><img src="logo.png" alt="logo"></div>
-    <form action="" method="post">
-        <div class="inputId">
-        <input type="text">
-        <label for="email">전화번호 사용자이름또는이메일</label>
+        <div class="borderBox">
+            <div class="logo"><img src="logo.png" alt="logo"></div>
+            <form action="" method="post">
+                <div class="inputId">
+                    <input type="text" required>
+                    <label for="email">전화번호 사용자 이름 또는 이메일</label>
+                </div>
+                <div class="inputPassword">
+                    <input type="password" name="" id="password" required>
+                    <label for="password">비밀번호</label>
+                </div>
+                <button class=loginBtn type="submit"> 로그인 </button>
+                <!-- <input type="submit" value="로그인"> -->
+            </form>
+            <div class="or">
+                <div class="s311c"></div>
+                <div class="orText">또는</div>
+                <div class="s311c"></div>
+            </div>
+
+            <button class="loginFb">
+                <span class="fbLogo"><img src="fbLogo.png" alt="fbLogo"></span>
+                Facebook으로 로그인
+            </button>
+            <div class="findPassword">비밀번호를 잊으셨나요?</div>
+            </div>
+
+        <div class="borderBox register">
+            <p class="register">계정이 없으신가요? <span>가입하기</span></p>
         </div>
-        <div class="inputPassword">
-        <input type="password" name="" id="password" >
-        <label for="password">비밀번호</label>
+
+        <div class="downApp">
+            <p>앱을 다운로드하세요.</p>
+            <div class="downImg">
+                <img src="appStore.png" alt="appStore">
+                <img src="googlePlay.png" alt="googlePlay">
+            </div>
         </div>
-        <button type="submit">로그인</button>
-        <!-- <input type="submit" value="로그인"> -->
-    </form>
-    <div class="or">또는</div>
-    <div class="loginFb">Facebook으로 로그인</div>
-    <div class="findPassword">비밀번호를 잊으셨나요?</div>
-    </div>
 </body>
+
 </html>
