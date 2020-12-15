@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .basicImg {
+            position:absolute;
+            opacity:0;
+            visibility: hidden;
+        }
+        .nowImg, .nextImg{
+            opacity:1;
+            visibility: visible;
+        }
+        .nextImg{
+            transition:opacity 2s ease-in;
+            z-index:2;
+        }
+    </style>
+</head>
+<body>
+    <img id="first" class = "basicImg nowImg" src="./screenshot01.jpg" alt="">
+    <img id="second" class = "basicImg nowImg nextImg" src="./screenshot02.jpg" alt="">
+    <img id="third" class = "basicImg" src="./screenshot03.jpg" alt="">
+    <img id="fourth" class = "basicImg" src="./screenshot04.jpg" alt="">
+    <img id="fifth" class = "basicImg" src="./screenshot05.jpg" alt="">
+    <script>
+        // const img1 = document.querySelector('#first').classList;
+        // const img2 = document.querySelector('#second').classList;
+        // const img3 = document.querySelector('#third').classList;
+        // const img5 = document.querySelector('#fourth').classList;
+        // const img4 = document.querySelector('#fifth').classList;
+
+        const imgArray = new Array();
+        imgArray.push(document.querySelector('#first').classList);
+        imgArray.push(document.querySelector('#second').classList);
+        imgArray.push(document.querySelector('#third').classList);
+        imgArray.push(document.querySelector('#fourth').classList);
+        imgArray.push(document.querySelector('#fifth').classList);
+
+        let i = 0;
+        let j = 1;
+
+        function f() {
+            if(i > 4) i =0;
+            if(j > 4) j=0;
+
+            imgArray[i].remove('nowImg');
+            if(j > 3){
+            imgArray[0].add('nowImg', 'nextImg');
+            }else{
+            imgArray[j+1].add('nowImg', 'nextImg');
+            }
+            imgArray[j].remove('nextImg');
+            i++;j++;
+        }
+        setInterval(f,5000);
+    </script>
+</body>
+</html>
