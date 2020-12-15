@@ -3,27 +3,19 @@
 }
 .changeImg img{
     position: absolute;
-    top:80px;
+    top:83px;
     left:112px;
 }
-.changeImg .notNow {
+.basicImg {
+    position:absolute;
     opacity:0;
-    visibility:hidden;
+    visibility: hidden;
 }
-.changeImg .nowImg {
-    transition:opacity 1.5s ease-in;
+.nowImg, .nextImg{
+    opacity:1;
+    visibility: visible;
+}
+.nextImg{
+    transition:opacity 2s ease-in;
     z-index:2;
 }
-/* .changeImg .nowImg {
-    animation:fadein 3s;
-    z-index:2;
-} */
-/* 
-@keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-} */

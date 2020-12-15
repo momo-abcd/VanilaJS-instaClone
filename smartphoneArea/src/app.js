@@ -1,29 +1,24 @@
-const change = document.querySelector('.changeImg');
+const imgArray = new Array();
+imgArray.push(document.querySelector('#first').classList);
+imgArray.push(document.querySelector('#second').classList);
+imgArray.push(document.querySelector('#third').classList);
+imgArray.push(document.querySelector('#fourth').classList);
+imgArray.push(document.querySelector('#fifth').classList);
 
-const nodes = change.childNodes;
-let i = 1;
+let i = 0;
+let j = 1;
 
-function showImage(){
-    if(i > 5) i=1;
-    if(i ==1 ){
-        nodes[i].classList.add('nowImg');
-        nodes[i].classList.remove("notNow");
-        nodes[i+2].classList.remove("nowImg");
-        nodes[i+4].classList.remove("nowImg");
-        nodes[i].classList.add("notNow");
-    }else if (i == 3) {
-        nodes[i].classList.add('nowImg');
-        nodes[i].classList.remove("notNow");
-        nodes[i+2].classList.remove("nowImg");
-        nodes[i-2].classList.add("notNow");
-        nodes[i-2].classList.remove("nowImg");
-    }else if (i == 5) {
-        nodes[i].classList.add('nowImg');
-        nodes[i].classList.remove("notNow");
-        nodes[i-2].classList.remove("nowImg");
-        nodes[i-2].classList.add("notNow");
-        nodes[i-4].classList.remove("nowImg");
+function fadein(){
+    if (i > 4) i = 0;
+    if (j > 4) j = 0;
+
+    imgArray[i].remove('nowImg');
+    if (j > 3) {
+        imgArray[0].add('nowImg', 'nextImg');
+    } else {
+        imgArray[j + 1].add('nowImg', 'nextImg');
     }
-        i += 2;
-   }
-   setInterval(showImage,3000);
+    imgArray[j].remove('nextImg');
+    i++; j++;
+}
+setInterval(fadein, 5000);
